@@ -10,5 +10,9 @@ main:
     la $a0, start1
     syscall
 
-
+#Taking the user input for strings
+    li $v0, 8
+    la $a0, max_input
+    li $a1, 101
+    syscall
 
