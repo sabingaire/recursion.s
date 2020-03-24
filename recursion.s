@@ -36,6 +36,19 @@ lw $t2, array1($t1)
 lw $t3, array2($t1)
 add $t5, $t2, $t3
 addi $t6, $t5, 0
+#b if sum <10
+blt $t5, 10, append
+addi $t5, $t5, -10
+append:
+add $t5, $t5, $t0
+sw $t5, array3($t1)
+sge $t0, $t6, 10
+
+#increment counter
+addi $t1, $t1, 4
+j start1
+end1:
+jr $ra
 
 
 
