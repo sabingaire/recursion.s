@@ -1,8 +1,13 @@
 .data
-max_input: .space 10000
+max_input: .space 101
 not_valid: .asciiz "Invalid Input"
 start1: .asciiz "Enter the string:
-theEntry: .word 0
+Helper_1: .space 160
+Helper_2: .space 160
+Helper_3: .space 160
+Helper_4: .space 160
+Helper_5: .space 160
+size_of_helper: .word 40
 
 
 .text
