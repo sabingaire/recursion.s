@@ -31,15 +31,20 @@ main:
     la $a0, input_string
     li $a1, 101
     syscall
+
+    li $s2,0
+
+first_loop:
+    la $a1, input_string
+    add $a1, $a1, $s2
+    lb $a1, 0($a1)
+
     
 
 
 
 
-#Calling the function
 
-lw $a0, theEntry
-jal
 
 
 addfunct:
