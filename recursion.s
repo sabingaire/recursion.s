@@ -106,6 +106,15 @@ end_second_loop:
     or $t5, $t0, $t3
     bne $t5, $zero, invalid_input
 
+add $s7, $t7, $zero # count
+    addi $s6, $s2, -1
+    sgt $t6, $s7, $s6
+    beq $t6, $zero, back
+
+    j my_subprogram
+    # parameter $a1
+    # return $t9
+
 
 
 
