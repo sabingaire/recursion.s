@@ -51,9 +51,13 @@ first_loop:
     addi $s2, $s2, 1
     li $t0, 101
     slt $t5, $s2, $t0
-    bne $t5, $zero, first_loop   
+    bne $t5, $zero, first_loop
     
     j invalid_input
+
+end_first_loop:
+    li $t9, 0
+    add $t9, $s2, $zero
 
 
 
@@ -62,26 +66,26 @@ first_loop:
 
 
 addfunct:
-beq $t3, $zero end_add
-li $t4, 160
-sub $t4, $t4, $t3
-la $t6, Helper_3
-la $t9, Helper_2
-add $t6, $t6, $t4
-add $t9, $t9, $t4
-lw $t8, 0($t6)
-lw $t2, 0($t9)
-add $t6, $t8, $t2
-add $t6, $t6, $s1
-li $t9, 10
-div $t6, $t9
-mfhi $t6 # This saves the quotient
-mflo $s1 # This saves the remainder
-la $t8, Helper_2
-add $t8, $t8, $t4
-sw $t6, 0($t8)
-addi $t3, $t3, -4
-j add_funct
+    beq $t3, $zero end_add
+    li $t4, 160
+    sub $t4, $t4, $t3
+    la $t6, Helper_3
+    la $t9, Helper_2
+    add $t6, $t6, $t4
+    add $t9, $t9, $t4
+    lw $t8, 0($t6)
+    lw $t2, 0($t9)
+    add $t6, $t8, $t2
+    add $t6, $t6, $s1
+    li $t9, 10
+    div $t6, $t9
+    mfhi $t6 # This saves the quotient
+    mflo $s1 # This saves the remainder
+    la $t8, Helper_2
+    add $t8, $t8, $t4
+    sw $t6, 0($t8)
+    addi $t3, $t3, -4
+    j add_funct
 
 #increment counter
 addi $t1, $t1, 4
