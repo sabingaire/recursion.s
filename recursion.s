@@ -193,6 +193,14 @@ Corresponding_ascii:
     and $t5, $t5, $t0
     bne $t5, $zero, capital
 
+    li $t3, 96
+    li $s1, 97
+    add $s1, $s1, $s5
+    sgt $t5, $s4, $t3
+    slt $t0, $s4, $s1
+    and $t5, $t5, $t0
+    bne $t5, $zero, small
+
 
 
 
