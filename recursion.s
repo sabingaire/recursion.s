@@ -222,6 +222,13 @@ Corresponding_ascii:
     addiu $s4, $s4, -48
     jr $ra
 
+invalid_input:
+    li $v0, 4
+    la $a0, Not_Valid
+    syscall
+    j exit
+
+
 
 
 
