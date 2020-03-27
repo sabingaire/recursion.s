@@ -54,17 +54,15 @@ lw $t8, 0($t6)
 lw $t2, 0($t9)
 add $t6, $t8, $t2
 add $t6, $t6, $s1
-#lw $t2, array1($t1)
-#lw $t3, array2($t1)
-#add $t5, $t2, $t3
-#addi $t6, $t5, 0
-#b if sum <10
-#blt $t5, 10, append
-addi $t5, $t5, -10
-append:
-add $t5, $t5, $t0
-sw $t5, array3($t1)
-sge $t0, $t6, 10
+li $t9, 10
+div $t6, $t9
+mfhi $t6 # This saves the quotient
+mflo $s1 # This saves the remainder
+la $t8, Helper_2
+add $t8, $t8, $t4
+sw $t6, 0($t8)
+addi $t3, $t3, -4
+j add_funct
 
 #increment counter
 addi $t1, $t1, 4
