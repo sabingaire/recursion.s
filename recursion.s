@@ -130,6 +130,10 @@ print:
 
     branchBack:
     beq $t0, $zero, skip_print
+#If you opt to print
+    syscall
+
+
 
 
 
