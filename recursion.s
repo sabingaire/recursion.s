@@ -123,6 +123,14 @@ back:
     addi $t4, $zero, 1 # count = 0
     li $t0, 0
 
+print:
+    beq $t4, $t5, end_print
+    lw $a0, 0($s1)
+    bne $a0, $zero, branch
+
+    branchBack:
+    beq $t0, $zero, skip_print
+
 
 
 
