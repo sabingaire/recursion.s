@@ -1,5 +1,5 @@
 .data
-max_input: .space 101
+input_string: .space 101
 not_valid: .asciiz "Invalid Input"
 start1: .asciiz "Enter the string:
 Helper_1: .space 160
@@ -28,7 +28,7 @@ main:
 
     #Taking the user input for strings
     li $v0, 8
-    la $a0, max_input
+    la $a0, input_string
     li $a1, 101
     syscall
     
@@ -43,17 +43,18 @@ jal
 
 
 addfunct:
-li $t1, 0
-li $t0, 0
-start1:
-#start from back(front)
-beq $t1, 160, end1
-lw $t2, array1($t1)
-lw $t3, array2($t1)
-add $t5, $t2, $t3
-addi $t6, $t5, 0
+beq $t3, $zero end_add
+li $t4, 160
+sub $t4, $t4, $t3
+la $t6, Helper_3
+la $t9, Helper_2
+
+#lw $t2, array1($t1)
+#lw $t3, array2($t1)
+#add $t5, $t2, $t3
+#addi $t6, $t5, 0
 #b if sum <10
-blt $t5, 10, append
+#blt $t5, 10, append
 addi $t5, $t5, -10
 append:
 add $t5, $t5, $t0
