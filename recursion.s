@@ -208,6 +208,12 @@ Corresponding_ascii:
     and $t5, $t5, $t0
     bne $t5, $zero, number
 
+    j invalid_input
+    
+    small:
+    addiu $s4, $s4, -87
+    jr $ra
+
 
 
 
