@@ -92,6 +92,11 @@ second_loop:
     or $t5, $t5, $t4
     beq $t5, $zero, end_second_loop
 
+    addi $t7, $t7, -1       # decrement
+    li $t0, -1
+    sgt $t5, $t7, $t0
+    bne $t5, $zero, second_loop 
+
 
 
 
