@@ -73,6 +73,14 @@ first_loop2:
     bne $t5, $zero, first_loop2
 
 
+end_first_loop2:
+
+    li $t7, 0
+    addi $t9, $t9, -1
+    add $t7, $t7, $t9
+
+
+
 
 
 
