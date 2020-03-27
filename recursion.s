@@ -48,6 +48,12 @@ first_loop:
     or $t5, $t5, $t4
     beq $t5, $zero, end_first_loop
     
+    addi $s2, $s2, 1
+    li $t0, 101
+    slt $t5, $s2, $t0
+    bne $t5, $zero, first_loop   
+    
+    j invalid_input
 
 
 
