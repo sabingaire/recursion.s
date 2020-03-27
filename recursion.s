@@ -201,6 +201,13 @@ Corresponding_ascii:
     and $t5, $t5, $t0
     bne $t5, $zero, small
 
+    li $t3, 47
+    li $s1, 58
+    sgt $t5, $s4, $t3
+    slt $t0, $s4, $s1
+    and $t5, $t5, $t0
+    bne $t5, $zero, number
+
 
 
 
