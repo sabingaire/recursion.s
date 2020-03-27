@@ -182,6 +182,13 @@ j start1
 end1:
 jr $ra
 
+Corresponding_ascii:
+    # parameter $s4
+    # return $s4
+    li $t3, 64
+    li $s1, 65
+    add $s1, $s5, $s1
+    sgt $t5, $s4, $t3 
 
 
 
