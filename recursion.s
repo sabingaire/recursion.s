@@ -64,6 +64,10 @@ first_loop2:
     add $a1, $a1, $t9
     lb $a1, 0($a1)
 
+    li $t5, 10
+    beq $a1, $t5, end_first_loop2
+
+
 
 
 
