@@ -34,11 +34,19 @@ main:
 
     li $s2,0
 
+
 first_loop:
     la $a1, input_string
     add $a1, $a1, $s2
     lb $a1, 0($a1)
 
+
+    li $t5, 32
+    li $t4, 9
+    seq $t5, $a1, $t5
+    seq $t4, $a1, $t4
+    or $t5, $t5, $t4
+    beq $t5, $zero, end_first_loop
     
 
 
