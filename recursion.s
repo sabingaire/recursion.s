@@ -67,6 +67,10 @@ first_loop2:
     li $t5, 10
     beq $a1, $t5, end_first_loop2
 
+    addi $t9, $t9, 1 # increment
+    li $t5, 100
+    slt $t5, $t9, $t5
+    bne $t5, $zero, first_loop2
 
 
 
