@@ -133,7 +133,15 @@ print:
 #If you opt to print
     syscall
 
+    skip_print:
+        addi $s1, $s1, -4
+        addi $t4, $t4, 1
+        j print
 
+    end_print:
+        lw $a0, 0($s1)
+        syscall
+        j exit
 
 
 
