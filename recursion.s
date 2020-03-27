@@ -59,6 +59,11 @@ end_first_loop:
     li $t9, 0
     add $t9, $s2, $zero
 
+first_loop2:
+    la $a1, input_string
+    add $a1, $a1, $t9
+    lb $a1, 0($a1)
+
 
 
 
