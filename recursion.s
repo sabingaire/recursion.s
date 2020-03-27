@@ -115,6 +115,14 @@ add $s7, $t7, $zero # count
     # parameter $a1
     # return $t9
 
+back:
+    li $v0, 1
+    la $s1, Helper_1
+    lw $t5, size_of_helper
+    addi $s1, $s1, 156
+    addi $t4, $zero, 1 # count = 0
+    li $t0, 0
+
 
 
 
