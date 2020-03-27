@@ -210,6 +210,10 @@ Corresponding_ascii:
 
     j invalid_input
     
+    capital:
+    addiu $s4, $s4, -55
+    jr $ra
+    
     small:
     addiu $s4, $s4, -87
     jr $ra
