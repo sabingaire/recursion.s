@@ -218,6 +218,11 @@ Corresponding_ascii:
     addiu $s4, $s4, -87
     jr $ra
 
+    number:
+    addiu $s4, $s4, -48
+    jr $ra
+
+
 
 
 
