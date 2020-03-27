@@ -95,7 +95,16 @@ second_loop:
     addi $t7, $t7, -1       # decrement
     li $t0, -1
     sgt $t5, $t7, $t0
-    bne $t5, $zero, second_loop 
+    bne $t5, $zero, second_loop
+
+end_second_loop:
+
+    sub $s1, $t7, $s2
+    slt $t0, $s1, $zero
+    li $s3, 19
+    sgt $t3, $s1, $s3
+    or $t5, $t0, $t3
+    bne $t5, $zero, invalid_input
 
 
 
