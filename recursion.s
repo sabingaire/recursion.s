@@ -17,19 +17,24 @@ main:
     la $a0, start1
     syscall
 
-#Taking the user input for strings
-    li $v0, 8
-    la $a0, max_input
-    li $a1, 101
-    syscall
 
-    li $t5, 2859054 
+
+    li $t5, 2859054
     li $t0, 11
     div $t5, $t0
     mfhi $t5 # module 11
     addi $s0, $t5, 26
     addiu $s5, $s0, -10
-    sw $v0, theEntry
+
+    #Taking the user input for strings
+    li $v0, 8
+    la $a0, max_input
+    li $a1, 101
+    syscall
+    
+
+
+
 
 #Calling the function
 
