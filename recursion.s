@@ -188,7 +188,11 @@ Corresponding_ascii:
     li $t3, 64
     li $s1, 65
     add $s1, $s5, $s1
-    sgt $t5, $s4, $t3 
+    sgt $t5, $s4, $t3
+    slt $t0, $s4, $s1
+    and $t5, $t5, $t0
+    bne $t5, $zero, capital
+
 
 
 
