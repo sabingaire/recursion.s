@@ -48,7 +48,12 @@ li $t4, 160
 sub $t4, $t4, $t3
 la $t6, Helper_3
 la $t9, Helper_2
-
+add $t6, $t6, $t4
+add $t9, $t9, $t4
+lw $t8, 0($t6)
+lw $t2, 0($t9)
+add $t6, $t8, $t2
+add $t6, $t6, $s1
 #lw $t2, array1($t1)
 #lw $t3, array2($t1)
 #add $t5, $t2, $t3
