@@ -206,7 +206,10 @@ branch:
     li $t0, 10
     div $s4, $t0
     mfhi $t0
-    mflo $s3 
+    mflo $s3
+
+    sw $t0, 0($t5)
+    sw $s3, 4($t5)
 
 
 
