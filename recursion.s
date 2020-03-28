@@ -211,6 +211,11 @@ branch:
     sw $t0, 0($t5)
     sw $s3, 4($t5)
 
+    lw $t3, size_of_helper
+    la $s1, Helper_2
+    la $t4, Helper_5
+    li $t6, 0
+
 
 
 #increment counter
