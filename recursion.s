@@ -188,6 +188,12 @@ branch:
     addi $t1, $t1, -1
     j exponent
 
+    end_exponent:
+    lw $t5, size_of_helper # size
+    la $s1, Helper_4
+    li $t4, 0 # count
+
+
 
 
 #increment counter
