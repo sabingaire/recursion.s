@@ -184,6 +184,10 @@ branch:
     addi $t0, $t0, -4 # decrement
     j multiply
 
+    multiplyEnd:
+    addi $t1, $t1, -1
+    j exponent
+
 
 
 #increment counter
