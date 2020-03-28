@@ -223,6 +223,11 @@ branch:
     addi $s1, $s1, 4
     addi $t4, $t4, 4
 
+    end_copy2:
+    lw $t5, size_of_helper # array size
+    la $s1, Helper_2
+    li $t4, 0 #count
+
 
 
 #increment counter
