@@ -229,6 +229,15 @@ branch:
     li $t4, 0 #count
 
 
+    initialize5:
+        beq $t4, $t5, end_initialize5
+        sw $zero, 0($s1)
+        addi $s1, $s1, 4
+        addi $t4, $t4, 1
+        j initialize5
+    
+        end_initialize5:
+
 
 #increment counter
 addi $t1, $t1, 4
