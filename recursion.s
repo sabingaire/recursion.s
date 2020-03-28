@@ -154,8 +154,8 @@ branch:
 
 
 
-addfunct:
-    beq $t3, $zero end_add
+    addition:
+    beq $t3, $zero end_addition
     li $t4, 160
     sub $t4, $t4, $t3
     la $t6, Helper_3
