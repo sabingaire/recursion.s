@@ -216,6 +216,13 @@ branch:
     la $t4, Helper_5
     li $t6, 0
 
+    copy2:
+    beq $t6, $t3, end_copy2
+    lw $t9, 0($s1)
+    sw $t9, 0($t4)
+    addi $s1, $s1, 4
+    addi $t4, $t4, 4
+
 
 
 #increment counter
