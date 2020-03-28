@@ -174,7 +174,17 @@ branch:
     add $t8, $t8, $t4
     sw $t6, 0($t8)
     addi $t3, $t3, -4
-    j add_funct
+    j addition
+
+    end_addition:
+
+    la $s1, Helper_3
+    sw $zero,0($s1)
+    li $s3, 4
+    addi $t0, $t0, -4 # decrement
+    j multiply
+
+
 
 #increment counter
 addi $t1, $t1, 4
