@@ -201,6 +201,13 @@ branch:
     addi $t4, $t4, 1
     j initialize4
 
+    end_initialize4:
+    la $t5, Helper_4
+    li $t0, 10
+    div $s4, $t0
+    mfhi $t0
+    mflo $s3 
+
 
 
 #increment counter
