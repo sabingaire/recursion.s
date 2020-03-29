@@ -237,6 +237,10 @@ branch:
         j initialize5
     
         end_initialize5:
+    li $t5, 0
+    li $t0, 8 # count
+    li $s3, 0 # Helper_3 index
+
 
 
 #increment counter
