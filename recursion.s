@@ -273,7 +273,10 @@ branch:
         addi $t3, $t3, -4
         j multiply2In
     
-   
+   multiply2InEnd:
+      
+          li $t3, 160
+          li $s1, 0
 
 #increment counter
 addi $t1, $t1, 4
