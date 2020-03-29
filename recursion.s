@@ -322,6 +322,12 @@ add $t6, $t6, $t4
 add $t9, $t9, $t4
 lw $t8, 0($t6)
 lw $t2, 0($t9)
+add $t6, $t8, $t2
+add $t6, $t6, $s1
+li $t9, 10
+div $t6, $t9
+mfhi $t6
+mflo $s1 
 
 #increment counter
 addi $t1, $t1, 4
