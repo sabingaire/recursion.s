@@ -265,7 +265,10 @@ branch:
     div $s1, $t4
     mfhi $t4 #This saves the remainder
     mflo $t5 # This saves the quoteient
-    
+    la $t6, Helper_3
+    add $t6, $t6, $s3
+    sw $t4, 0($t6)
+
 
 #increment counter
 addi $t1, $t1, 4
