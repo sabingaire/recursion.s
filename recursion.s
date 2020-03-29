@@ -236,11 +236,15 @@ branch:
         addi $t4, $t4, 1
         j initialize5
     
-        end_initialize5:
+    end_initialize5:
     li $t5, 0
     li $t0, 8 # count
     li $s3, 0 # Helper_3 index
 
+    multiply2: # Helper_5 * Helper_4 = Helper_2
+   beq $t0, $zero, multiply2End
+   li $t3, 160
+   li $t5, 0
 
 
 #increment counter
