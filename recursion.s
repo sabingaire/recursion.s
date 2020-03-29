@@ -307,6 +307,11 @@ add_funct:
     addi $t0, $t0, -4   # decrement of the characters
     j multiply2
 
+    multiply2End:
+    
+        li $t3, 160
+        li $s1, 0
+
 #increment counter
 addi $t1, $t1, 4
 j start1
