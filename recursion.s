@@ -259,6 +259,13 @@ branch:
     add $t9, $t9, $t4
     lw $t4, 0($t9)
 
+    mul $s1, $s1, $t4
+    add $s1, $s1, $t5
+    li $t4, 10
+    div $s1, $t4
+    mfhi $t4 #This saves the remainder
+    mflo $t5 # This saves the quoteient
+    
 
 #increment counter
 addi $t1, $t1, 4
