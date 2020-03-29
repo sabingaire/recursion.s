@@ -278,6 +278,13 @@ branch:
           li $t3, 160
           li $s1, 0
 
+add_funct:
+    beq $t3, $zero end_add
+    li $t4, 160
+    sub $t4, $t4, $t3
+    la $t6, Helper_3
+    la $t9, Helper_2
+
 #increment counter
 addi $t1, $t1, 4
 j start1
