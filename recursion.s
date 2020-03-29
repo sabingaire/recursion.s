@@ -292,6 +292,13 @@ add_funct:
     add $t6, $t6, $s1
     li $t9, 10
     div $t6, $t9
+    mfhi $t6 # quotient
+    mflo $s1 # remainder
+    la $t8, Helper_2
+    add $t8, $t8, $t4
+    sw $t6, 0($t8)
+    addi $t3, $t3, -4
+    j add_funct
 
 #increment counter
 addi $t1, $t1, 4
