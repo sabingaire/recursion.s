@@ -269,6 +269,11 @@ branch:
     add $t6, $t6, $s3
     sw $t4, 0($t6)
 
+    addi $s3, $s3, 4 #increment
+        addi $t3, $t3, -4
+        j multiply2In
+    
+   
 
 #increment counter
 addi $t1, $t1, 4
