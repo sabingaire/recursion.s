@@ -312,6 +312,17 @@ add_funct:
         li $t3, 160
         li $s1, 0
 
+addition3:
+beq $t3, $zero end_addition3
+li $t4, 160
+sub $t4, $t4, $t3
+la $t6, Helper_2
+la $t9, Helper_1
+add $t6, $t6, $t4
+add $t9, $t9, $t4
+lw $t8, 0($t6)
+lw $t2, 0($t9)
+
 #increment counter
 addi $t1, $t1, 4
 j start1
