@@ -334,6 +334,12 @@ sw $t6, 0($t8)
 addi $t3, $t3, -4
 j addition3
 
+end_addition3:
+    addi $s7, $s7, -1 # decrement count
+    bne $s7, $s6, subprogram_loop
+        
+    j back
+
 #increment counter
 addi $t1, $t1, 4
 j start1
