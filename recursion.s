@@ -271,6 +271,25 @@ multiply:
     add $t9, $t9, $t4
     lw $t4, 0($t9)
 
+    mul $s1, $s1, $t4
+        add $s1, $s1, $t5
+        li $t4, 10
+        div $s1, $t4
+        mfhi $t4 # remainder
+        mflo $t5 # quotient
+        la $t6, Helper_3
+        add $t6, $t6, $s3
+        sw $t4, 0($t6)
+    
+        addi $s3, $s3, 4 #increment
+        addi $t3, $t3, -4
+        j multiplyIn
+    
+        multiplyInEnd:
+    
+        li $t3, 160
+        li $s1, 0 
+
 
 
 
