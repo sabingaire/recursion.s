@@ -17,7 +17,7 @@ main:
     
 
 
-    li $t5, 2859054
+    li $t5, 2859054 #My id number
     li $t0, 11
     div $t5, $t0
     mfhi $t5 # module 11
