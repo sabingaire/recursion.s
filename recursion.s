@@ -13,10 +13,7 @@ size_of_helper: .word 40
 .text
 main:
     
-    li $v0, 4
-    la $a0, start1
-    syscall
-
+    
 
 
     li $t5, 2859054
@@ -483,11 +480,7 @@ end_addition3:
         
     j back
 
-#increment counter
-addi $t1, $t1, 4
-j start1
-end1:
-jr $ra
+
 
 Corresponding_ascii:
     # parameter $s4
