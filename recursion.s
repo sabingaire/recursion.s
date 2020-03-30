@@ -171,6 +171,16 @@ initialize: #initializing all stacks with 0's
     addi $t4, $t4, 1
     j initialize
 
+end_initialize:
+
+    li $t5, 10
+    div $s0, $t5
+    mfhi $t5
+    mflo $t0
+    la $s3, Helper_4
+    sw $t5, 0($s3)
+    sw $t0, 4($s3)
+
 
 
 
