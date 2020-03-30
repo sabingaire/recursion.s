@@ -156,6 +156,13 @@ my_subprogram:
     la $t6, Helper_1
     li $t4, 0 #count
 
+initialize: #initializing all stacks with 0's
+    beq $t4, $t5, end_initialize
+    sw $zero, 0($t0)
+    sw $zero, 0($s3)
+    sw $zero, 0($t3)
+    sw $zero, 0($s1)
+    sw $zero, 0($t6)
 
 
 
