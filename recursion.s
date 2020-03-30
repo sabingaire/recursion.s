@@ -1,7 +1,7 @@
 .data
 input_string: .space 101
-not_valid: .asciiz "Invalid Input"
-start1: .asciiz "Enter the string:
+Not_Valid: .asciiz "Invalid Input"
+start1: .asciiz "Enter the string:"
 Helper_1: .space 160
 Helper_2: .space 160
 Helper_3: .space 160
@@ -288,7 +288,7 @@ multiply:
         multiplyInEnd:
     
         li $t3, 160
-        li $s1, 0 
+        li $s1, 0
 
 
 
@@ -535,6 +535,9 @@ invalid_input:
     syscall
     j exit
 
+exit:
+li $v0, 10
+syscall
 
 
 
