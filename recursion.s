@@ -193,6 +193,15 @@ subprogram_loop:
     add $a1, $a1, $s7
     lb $s4, 0($a1)
 
+jal Corresponding_ascii #ascii value to decimal
+    # parameter $s4
+    # returns val $s4
+
+    sub $t1, $t7, $s7
+    #initialize Helper_2 with 01
+    lw $t5, size_of_helper # size
+    la $s1, Helper_2
+    li $t4, 0 # count
 
 
 
