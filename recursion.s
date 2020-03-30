@@ -216,6 +216,19 @@ initialize2:
     la $t0, Helper_2
     sw $t5, 0($t0)
 
+exponent:
+# parameters Helper_4, $t1
+# return in Helper_2
+beq $t1, $zero end_exponent
+li $t5, 0 # carry
+li $t0, 8 # count i
+li $s3, 0 # Helper_3 index
+# put values Helper_2 in Helper_5
+lw $t3, size_of_helper
+la $s1, Helper_2
+la $t4, Helper_5
+li $t6, 0
+
 
 
 
