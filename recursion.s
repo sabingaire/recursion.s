@@ -242,6 +242,15 @@ copy:
     lw $t5, size_of_helper # array size
     la $s1, Helper_2
     li $t4, 0 #count
+    
+initialize3:
+    beq $t4, $t5, end_initialize3
+    sw $zero, 0($s1)
+    addi $s1, $s1, 4
+    addi $t4, $t4, 1
+    j initialize3
+
+    end_initialize3:
 
 
 
