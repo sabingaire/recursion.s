@@ -252,6 +252,24 @@ initialize3:
 
     end_initialize3:
 
+multiply:
+    # Helper_5 * Helper_4 = Helper_2
+    beq $t0, $zero, multiplyEnd
+    li $t3, 160
+    li $t5, 0
+
+    multiplyIn:
+    beq $t3, $zero multiplyInEnd
+    li $s1, 160
+    sub $s1, $s1, $t3
+    li $t4, 8
+    sub $t4, $t4, $t0
+    la $t6, Helper_5
+    la $t9, Helper_4
+    add $t6, $t6, $s1
+    lw $s1, 0($t6)
+    add $t9, $t9, $t4
+    lw $t4, 0($t9)
 
 
 
