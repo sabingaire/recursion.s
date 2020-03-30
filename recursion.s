@@ -1,17 +1,18 @@
 .data
-input_string: .space 101
-Not_Valid: .asciiz "Invalid Input"
-start1: .asciiz "Enter the string:"
 Helper_1: .space 160
 Helper_2: .space 160
 Helper_3: .space 160
 Helper_4: .space 160
 Helper_5: .space 160
 size_of_helper: .word 40
+input_string: .space 101
+Not_Valid: .asciiz "Invalid input"
+start1: .asciiz "Enter the string:"
 
 
 .text
 main:
+    
     
     
 
@@ -362,6 +363,8 @@ multiply:
     sw $t9, 0($t4)
     addi $s1, $s1, 4
     addi $t4, $t4, 4
+    addi $t6, $t6, 1
+    j copy2
 
     end_copy2:
     lw $t5, size_of_helper # array size
@@ -509,14 +512,15 @@ Corresponding_ascii:
     bne $t5, $zero, number
 
     j invalid_input
+    small:
+    addiu $s4, $s4, -87
+    jr $ra
     
     capital:
     addiu $s4, $s4, -55
     jr $ra
     
-    small:
-    addiu $s4, $s4, -87
-    jr $ra
+    
 
     number:
     addiu $s4, $s4, -48
