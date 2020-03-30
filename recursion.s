@@ -181,6 +181,20 @@ end_initialize:
     sw $t5, 0($s3)
     sw $t0, 4($s3)
 
+subprogram_loop:
+    li $t5, 10
+    div $s0, $t5
+    mfhi $t5
+    mflo $t0
+    la $s3, Helper_4
+    sw $t5, 0($s3)
+    sw $t0, 4($s3)
+    la $a1, input_string
+    add $a1, $a1, $s7
+    lb $s4, 0($a1)
+
+
+
 
 
 
