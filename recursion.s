@@ -147,6 +147,15 @@ branch:
     li $t0, 1
     j branchBack
 
+my_subprogram:
+    lw $t5, size_of_helper
+    la $t0, Helper_5
+    la $s3, Helper_4
+    la $t3, Helper_3
+    la $s1, Helper_2
+    la $t6, Helper_1
+    li $t4, 0 #count
+
 
 
 
