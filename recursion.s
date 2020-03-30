@@ -204,6 +204,19 @@ jal Corresponding_ascii #ascii value to decimal
     li $t4, 0 # count
 
 
+initialize2:
+    beq $t4, $t5, end_initialize2
+    sw $zero, 0($s1)
+    addi $s1, $s1, 4
+    addi $t4, $t4, 1
+    j initialize2
+
+    end_initialize2:
+    li $t5, 1
+    la $t0, Helper_2
+    sw $t5, 0($t0)
+
+
 
 
 
