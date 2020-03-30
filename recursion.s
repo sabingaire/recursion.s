@@ -327,7 +327,12 @@ add $t6, $t6, $s1
 li $t9, 10
 div $t6, $t9
 mfhi $t6
-mflo $s1 
+mflo $s1
+la $t8, Helper_1
+add $t8, $t8, $t4
+sw $t6, 0($t8)
+addi $t3, $t3, -4
+j addition3
 
 #increment counter
 addi $t1, $t1, 4
