@@ -12,7 +12,7 @@ size_of_helper: .word 40
 
 .text
 main:
-    main:
+    
     li $v0, 4
     la $a0, start1
     syscall
