@@ -163,6 +163,13 @@ initialize: #initializing all stacks with 0's
     sw $zero, 0($t3)
     sw $zero, 0($s1)
     sw $zero, 0($t6)
+    addi $t0, $t0, 4
+    addi $s3, $s3, 4
+    addi $t3, $t3, 4
+    addi $s1, $s1, 4
+    addi $t6, $t6, 4
+    addi $t4, $t4, 1
+    j initialize
 
 
 
