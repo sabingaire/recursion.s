@@ -1,3 +1,9 @@
+#Author : Sabin Gaire
+#ID: @02859054
+#Computer organization II mips project
+
+
+
 .data
 Helper_1: .space 160
 Helper_2: .space 160
