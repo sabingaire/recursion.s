@@ -33,7 +33,7 @@ main:
     li $s2,0
 
 
-first_loop:
+Loop_One:
     la $a1, input_string
     add $a1, $a1, $s2
     lb $a1, 0($a1)
@@ -44,34 +44,34 @@ first_loop:
     seq $t5, $a1, $t5
     seq $t4, $a1, $t4
     or $t5, $t5, $t4
-    beq $t5, $zero, end_first_loop
+    beq $t5, $zero, Circle_one
     
     addi $s2, $s2, 1
     li $t0, 101
     slt $t5, $s2, $t0
-    bne $t5, $zero, first_loop
+    bne $t5, $zero, Loop_One
     
     j invalid_input
 
-end_first_loop:
+Circle_one:
     li $t9, 0
     add $t9, $s2, $zero
 
-first_loop2:
+Looping_around:
     la $a1, input_string
     add $a1, $a1, $t9
     lb $a1, 0($a1)
 
     li $t5, 10
-    beq $a1, $t5, end_first_loop2
+    beq $a1, $t5, Circle_two
 
     addi $t9, $t9, 1 # increment
     li $t5, 100
     slt $t5, $t9, $t5
-    bne $t5, $zero, first_loop2
+    bne $t5, $zero, Looping_around
 
 
-end_first_loop2:
+Circle_two:
 
     li $t7, 0
     addi $t9, $t9, -1
@@ -88,14 +88,14 @@ second_loop:
     seq $t5, $a1, $t5
     seq $t4, $a1, $t4
     or $t5, $t5, $t4
-    beq $t5, $zero, end_second_loop
+    beq $t5, $zero, End_of_Second_loop
 
     addi $t7, $t7, -1       # decrement
     li $t0, -1
     sgt $t5, $t7, $t0
     bne $t5, $zero, second_loop
 
-end_second_loop:
+End_of_Second_loop:
 
     sub $s1, $t7, $s2
     slt $t0, $s1, $zero
@@ -456,26 +456,26 @@ add_funct:
         li $s1, 0
 
 addition3:
-beq $t3, $zero end_addition3
-li $t4, 160
-sub $t4, $t4, $t3
-la $t6, Helper_2
-la $t9, Helper_1
-add $t6, $t6, $t4
-add $t9, $t9, $t4
-lw $t8, 0($t6)
-lw $t2, 0($t9)
-add $t6, $t8, $t2
-add $t6, $t6, $s1
-li $t9, 10
-div $t6, $t9
-mfhi $t6
-mflo $s1
-la $t8, Helper_1
-add $t8, $t8, $t4
-sw $t6, 0($t8)
-addi $t3, $t3, -4
-j addition3
+    beq $t3, $zero end_addition3
+    li $t4, 160
+    sub $t4, $t4, $t3
+    la $t6, Helper_2
+    la $t9, Helper_1
+    add $t6, $t6, $t4
+    add $t9, $t9, $t4
+    lw $t8, 0($t6)
+    lw $t2, 0($t9)
+    add $t6, $t8, $t2
+    add $t6, $t6, $s1
+    li $t9, 10
+    div $t6, $t9
+    mfhi $t6
+    mflo $s1
+    la $t8, Helper_1
+    add $t8, $t8, $t4
+    sw $t6, 0($t8)
+    addi $t3, $t3, -4
+    j addition3
 
 end_addition3:
     addi $s7, $s7, -1 # decrement count
@@ -520,8 +520,6 @@ Corresponding_ascii:
     addiu $s4, $s4, -55
     jr $ra
     
-    
-
     number:
     addiu $s4, $s4, -48
     jr $ra
